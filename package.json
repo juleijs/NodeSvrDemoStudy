@@ -1,0 +1,23 @@
+{
+  "name": "nodesvrdemostudy",
+  "version": "1.0.0",
+  "description": "nodeSvrDemoStude",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juleijs/NodeSvrDemoStudy.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "Svr"
+  ],
+  "author": "nodejs_learner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juleijs/NodeSvrDemoStudy/issues"
+  },
+  "homepage": "https://github.com/juleijs/NodeSvrDemoStudy#readme"
+}
