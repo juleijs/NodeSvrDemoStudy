@@ -4,7 +4,6 @@
   "description": "nodeSvrDemoStude",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/juleijs/NodeSvrDemoStudy/issues"
   },
-  "homepage": "https://github.com/juleijs/NodeSvrDemoStudy#readme"
+  "homepage": "https://github.com/juleijs/NodeSvrDemoStudy#readme",
+  "dependencies": {
+    "ali-oss": "^6.1.1",
+    "big-number": "^2.0.0",
+    "body-parser": "^1.19.0"
+  }
 }
