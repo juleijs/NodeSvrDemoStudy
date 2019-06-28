@@ -31,4 +31,42 @@ app.all('*', (req, res, next) => {
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/update', require('./update'))
-app.use('/upload'), require('./lib/upload')
+app.use('/upload', require('./lib/upload'))
+
+// 路由
+app.use(require('./app/controller'))
+
+// 错误处理
+let logErrors = (err, req, res, next) => {
+  console.log(err.stack)
+  next(err)
+}
+
+let clientErrorHandler = (err, req, res, next) => {
+  if (req.xhr) {
+    res.status(500).send({
+      error: 'Something failed!'
+    })
+  } else {
+    next(err)
+  }
+}
+
+let errorHandler = (err, req, res, next) => {
+  res.status(500)
+  res.render('error', {
+    'error': err
+  })
+}
+
+app.use(logErrors)
+app.use(clientErrorHandler)
+app.use(errorHandler)
+
+let port = config.port || process.env.PORT || 5400
+if (process.env.NODE_ENV == 'production') {
+  port = '8080'
+}
+app.listen(port, () => {
+  console.log(`apiSvr listening on port ${port}`)
+})

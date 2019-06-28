@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "nodeSvrDemoStude",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon index.js",
+    "test": "cross-env NODE_ENV=dev forever start index.js",
+    "start": "cross-env NODE_ENV=production forever start index.js",
+    "stop": "forever stop index.js",
+    "schedule_start": "cross-env NODE_ENV=production forever start schedule/index.js",
+    "schedule_stop": "forever stop schedule/index.js",
+    "schedule_dev": "cross-env NODE_ENV=dev nodemon schedule/index.js",
+    "schedule_test": "cross-env NODE_ENV=dev forever start schedule/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juleijs/NodeSvrDemoStudy.git"

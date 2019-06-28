@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs')
 
 let config = {
+  port: 5400,
   oss: {
     region: 'oss-cn-shenzhen',
     accessKeyId: 'LTAIrRZ0BeRJpB0l',
