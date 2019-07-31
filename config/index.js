@@ -9,7 +9,15 @@ let config = {
     accessKeyId: 'LTAIrRZ0BeRJpB0l',
     accessKeySecret: 'kaLkYLuDm5zc6PCzGtxKILqJgqGf3s',
     bucket: 'img-juren'
-  }
+  },
+  db: {
+    host: '',
+    port: 5579,
+    dbname: '',
+    username: '',
+    password: '',
+    maxLimit: 1000,
+  },
 }
 
 module.exports = config
